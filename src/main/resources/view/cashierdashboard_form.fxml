@@ -11,47 +11,47 @@
     <children>
         <ImageView fitHeight="640.0" fitWidth="1207.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../img/b.jpg" />
+                <Image url="@../img/1.jpg" />
             </image>
         </ImageView>
-        <Button layoutX="52.0" layoutY="142.0" mnemonicParsing="false" onAction="#managecustomersOnAction" prefHeight="42.0" prefWidth="187.0" text="Manage Customers">
+        <Button layoutX="52.0" layoutY="142.0" mnemonicParsing="false" onAction="#managecustomersOnAction" prefHeight="42.0" prefWidth="250.0" text="Manage Customers">
             <font>
-                <Font name="Bernard MT Condensed" size="22.0" />
+                <Font name="Algerian" size="22.0" />
             </font>
         </Button>
-        <Button layoutX="52.0" layoutY="223.0" mnemonicParsing="false" onAction="#managestoreOnAction" prefHeight="42.0" prefWidth="187.0" text="Manage Store">
+        <Button layoutX="52.0" layoutY="223.0" mnemonicParsing="false" onAction="#managestoreOnAction" prefHeight="42.0" prefWidth="250.0" text="Manage Store">
             <font>
-                <Font name="Bernard MT Condensed" size="22.0" />
+                <Font name="Algerian" size="22.0" />
             </font>
         </Button>
-        <Button layoutX="52.0" layoutY="307.0" mnemonicParsing="false" onAction="#manageordersOnAction" prefHeight="42.0" prefWidth="187.0" text="Manage Orders">
+        <Button layoutX="52.0" layoutY="307.0" mnemonicParsing="false" onAction="#manageordersOnAction" prefHeight="42.0" prefWidth="250.0" text="Manage Orders">
             <font>
-                <Font name="Bernard MT Condensed" size="22.0" />
+                <Font name="Algerian" size="22.0" />
             </font>
         </Button>
-        <Button layoutX="52.0" layoutY="389.0" mnemonicParsing="false" onAction="#deliveryOnAction" prefHeight="42.0" prefWidth="187.0" text="Delivery">
+        <Button layoutX="52.0" layoutY="389.0" mnemonicParsing="false" onAction="#deliveryOnAction" prefHeight="42.0" prefWidth="250.0" text="Delivery">
             <font>
-                <Font name="Bernard MT Condensed" size="22.0" />
+                <Font name="Algerian" size="22.0" />
             </font>
         </Button>
-        <Button layoutX="52.0" layoutY="553.0" mnemonicParsing="false" onAction="#repairOnAction" prefHeight="42.0" prefWidth="187.0" text="Repair">
+        <Button layoutX="52.0" layoutY="553.0" mnemonicParsing="false" onAction="#repairOnAction" prefHeight="42.0" prefWidth="250.0" text="Repair">
             <font>
-                <Font name="Bernard MT Condensed" size="22.0" />
+                <Font name="Algerian" size="22.0" />
             </font>
         </Button>
-        <Button layoutX="52.0" layoutY="470.0" mnemonicParsing="false" onAction="#custombuildOnAction" prefHeight="42.0" prefWidth="187.0" text="Custom Build">
+        <Button layoutX="52.0" layoutY="470.0" mnemonicParsing="false" onAction="#custombuildOnAction" prefHeight="42.0" prefWidth="250.0" text="Custom Build">
             <font>
-                <Font name="Bernard MT Condensed" size="22.0" />
+                <Font name="Algerian" size="22.0" />
             </font>
         </Button>
-        <Label layoutX="52.0" layoutY="44.0" text="Hello : Sadun" textFill="WHITE">
+        <Label layoutX="52.0" layoutY="44.0" prefHeight="54.0" prefWidth="450.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="  GINZA Restaurant">
             <font>
-                <Font name="Bernard MT Condensed" size="43.0" />
+                <Font name="Algerian" size="43.0" />
             </font>
         </Label>
-        <Label fx:id="lbldateandtime" layoutX="785.0" layoutY="44.0" prefHeight="54.0" prefWidth="382.0" textFill="WHITE">
+        <Label fx:id="lbldateandtime" layoutX="735.0" layoutY="44.0" prefHeight="54.0" prefWidth="425.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;">
             <font>
-                <Font name="Bernard MT Condensed" size="43.0" />
+                <Font name="Algerian" size="43.0" />
             </font>
         </Label>
     </children>
