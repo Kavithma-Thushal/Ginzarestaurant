@@ -14,32 +14,22 @@
                 <Image url="@../img/1.jpg" />
             </image>
         </ImageView>
-        <Button layoutX="52.0" layoutY="142.0" mnemonicParsing="false" onAction="#managecustomersOnAction" prefHeight="42.0" prefWidth="250.0" text="Manage Customers">
+        <Button layoutX="52.0" layoutY="199.0" mnemonicParsing="false" onAction="#managecustomersOnAction" prefHeight="42.0" prefWidth="250.0" text="Manage Customers">
             <font>
                 <Font name="Algerian" size="22.0" />
             </font>
         </Button>
-        <Button layoutX="52.0" layoutY="223.0" mnemonicParsing="false" onAction="#managestoreOnAction" prefHeight="42.0" prefWidth="250.0" text="Manage Store">
+        <Button layoutX="52.0" layoutY="305.0" mnemonicParsing="false" onAction="#managestoreOnAction" prefHeight="42.0" prefWidth="250.0" text="Manage Store">
             <font>
                 <Font name="Algerian" size="22.0" />
             </font>
         </Button>
-        <Button layoutX="52.0" layoutY="307.0" mnemonicParsing="false" onAction="#manageordersOnAction" prefHeight="42.0" prefWidth="250.0" text="Manage Orders">
+        <Button layoutX="52.0" layoutY="407.0" mnemonicParsing="false" onAction="#manageordersOnAction" prefHeight="42.0" prefWidth="250.0" text="Manage Orders">
             <font>
                 <Font name="Algerian" size="22.0" />
             </font>
         </Button>
-        <Button layoutX="52.0" layoutY="389.0" mnemonicParsing="false" onAction="#deliveryOnAction" prefHeight="42.0" prefWidth="250.0" text="Delivery">
-            <font>
-                <Font name="Algerian" size="22.0" />
-            </font>
-        </Button>
-        <Button layoutX="52.0" layoutY="553.0" mnemonicParsing="false" onAction="#repairOnAction" prefHeight="42.0" prefWidth="250.0" text="Repair">
-            <font>
-                <Font name="Algerian" size="22.0" />
-            </font>
-        </Button>
-        <Button layoutX="52.0" layoutY="470.0" mnemonicParsing="false" onAction="#custombuildOnAction" prefHeight="42.0" prefWidth="250.0" text="Custom Build">
+        <Button layoutX="52.0" layoutY="520.0" mnemonicParsing="false" onAction="#deliveryOnAction" prefHeight="42.0" prefWidth="250.0" text="Delivery">
             <font>
                 <Font name="Algerian" size="22.0" />
             </font>
