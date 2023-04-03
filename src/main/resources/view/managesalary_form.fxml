@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="615.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.computershop.controller.ManagesalaryFormController">
+<AnchorPane fx:id="root" prefHeight="615.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.computershop.controller.ManagesalaryFormController">
    <children>
       <ImageView fitHeight="640.0" fitWidth="1207.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -75,5 +75,10 @@
             <TableColumn prefWidth="220.0" text="Date &amp; Time" />
          </columns>
       </TableView>
+      <Button layoutX="45.0" layoutY="560.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="34.0" prefWidth="78.0" style="-fx-background-color: grey;" text="Back">
+         <font>
+            <Font name="Bernard MT Condensed" size="17.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

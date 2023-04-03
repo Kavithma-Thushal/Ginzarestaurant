@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -20,12 +21,7 @@
                 <Font name="Algerian" size="40.0" />
             </font>
         </Label>
-        <TextField layoutX="95.0" layoutY="150.0" prefHeight="34.0" prefWidth="238.0" promptText="Username">
-            <font>
-                <Font name="Calibri" size="17.0" />
-            </font>
-        </TextField>
-        <TextField layoutX="95.0" layoutY="215.0" prefHeight="34.0" prefWidth="238.0" promptText="Password">
+        <TextField fx:id="txtUsername" layoutX="95.0" layoutY="150.0" prefHeight="34.0" prefWidth="238.0" promptText="Username">
             <font>
                 <Font name="Calibri" size="17.0" />
             </font>
@@ -35,5 +31,10 @@
                 <Font name="Algerian" size="17.0" />
             </font>
         </Button>
+      <PasswordField fx:id="txtPassword" layoutX="95.0" layoutY="216.0" prefHeight="34.0" prefWidth="238.0" promptText="Password">
+         <font>
+            <Font name="Calibri" size="17.0" />
+         </font>
+      </PasswordField>
     </children>
 </AnchorPane>
