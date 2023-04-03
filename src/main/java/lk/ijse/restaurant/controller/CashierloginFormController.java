@@ -1,4 +1,4 @@
-package lk.ijse.computershop.controller;
+package lk.ijse.restaurant.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

@@ -1,4 +1,4 @@
-package lk.ijse.computershop.db;
+package lk.ijse.restaurant.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,7 +10,7 @@ public class DBConnection {
     private Connection connection;
 
     private DBConnection() throws SQLException {
-        this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bashicomputershop", "root", "1234");
+        this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ginzarestaurant", "root", "1234");
     }
 
     public static DBConnection getInstance() throws SQLException {

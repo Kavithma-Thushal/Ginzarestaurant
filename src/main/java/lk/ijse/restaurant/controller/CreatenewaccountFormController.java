@@ -1,5 +1,6 @@
-package lk.ijse.computershop.controller;
+package lk.ijse.restaurant.controller;
 
 public class CreatenewaccountFormController {
+
 
 }

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="615.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.computershop.controller.ManagesalaryFormController">
+<AnchorPane fx:id="root" prefHeight="615.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.restaurant.controller.ManagesalaryFormController">
    <children>
       <ImageView fitHeight="640.0" fitWidth="1207.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -27,52 +27,52 @@
             <Font name="Algerian" size="25.0" />
          </font>
       </Label>
-      <TextField layoutX="302.0" layoutY="510.0" prefHeight="31.0" prefWidth="200.0" promptText="Salary Code">
+      <TextField fx:id="txtCode" layoutX="302.0" layoutY="510.0" prefHeight="31.0" prefWidth="200.0" promptText="Salary Code">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
       </TextField>
-      <TextField layoutX="302.0" layoutY="568.0" prefHeight="31.0" prefWidth="200.0" promptText="Amount">
+      <TextField fx:id="txtAmount" layoutX="302.0" layoutY="568.0" prefHeight="31.0" prefWidth="200.0" promptText="Amount">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
       </TextField>
-      <TextField layoutX="526.0" layoutY="565.0" prefHeight="31.0" prefWidth="200.0" promptText="DATE &amp; TIME">
+      <TextField fx:id="txtDatetime" layoutX="526.0" layoutY="565.0" prefHeight="31.0" prefWidth="200.0" promptText="DATE &amp; TIME">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
       </TextField>
-      <Button layoutX="979.0" layoutY="507.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: lightblue;" text="Save">
+      <Button layoutX="979.0" layoutY="507.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: lightblue;" text="Save">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="1089.0" layoutY="507.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: lightblue;" text="Search">
+      <Button layoutX="1089.0" layoutY="507.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: lightblue;" text="Search">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="979.0" layoutY="564.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: lightblue;" text="Update">
+      <Button layoutX="979.0" layoutY="564.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: lightblue;" text="Update">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="1089.0" layoutY="564.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: lightblue;" text="Delete">
+      <Button layoutX="1089.0" layoutY="564.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: lightblue;" text="Delete">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
       </Button>
-      <TextField layoutX="526.0" layoutY="510.0" prefHeight="31.0" prefWidth="200.0" promptText="Paying Employee ID">
+      <TextField fx:id="txtEmployeeid" layoutX="526.0" layoutY="510.0" prefHeight="31.0" prefWidth="200.0" promptText="Paying Employee ID">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
       </TextField>
-      <TableView layoutX="302.0" layoutY="31.0" prefHeight="443.0" prefWidth="878.0" style="-fx-background-color: LIGHTGREY;">
+      <TableView fx:id="tblSalary" layoutX="302.0" layoutY="31.0" prefHeight="443.0" prefWidth="878.0" style="-fx-background-color: LIGHTGREY;">
          <columns>
-            <TableColumn prefWidth="219.0" text="Salary Code" />
-            <TableColumn prefWidth="219.0" text="Paying Employee ID" />
-            <TableColumn prefWidth="219.0" text="Amount" />
-            <TableColumn prefWidth="220.0" text="Date &amp; Time" />
+            <TableColumn fx:id="colCode" prefWidth="219.0" text="Salary Code" />
+            <TableColumn fx:id="colEmployeeid" prefWidth="219.0" text="Paying Employee ID" />
+            <TableColumn fx:id="colAmount" prefWidth="219.0" text="Amount" />
+            <TableColumn fx:id="colDatetime" prefWidth="220.0" text="Date &amp; Time" />
          </columns>
       </TableView>
       <Button layoutX="45.0" layoutY="560.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="34.0" prefWidth="78.0" style="-fx-background-color: grey;" text="Back">

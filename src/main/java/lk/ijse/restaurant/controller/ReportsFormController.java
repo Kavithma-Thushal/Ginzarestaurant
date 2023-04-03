@@ -1,4 +1,4 @@
-package lk.ijse.computershop.controller;
+package lk.ijse.restaurant.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,7 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
 
-public class ManageemployeesFormController implements Initializable {
+public class ReportsFormController implements Initializable {
 
     @FXML
     private AnchorPane root;
