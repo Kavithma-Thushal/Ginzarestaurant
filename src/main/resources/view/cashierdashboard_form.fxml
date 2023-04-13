@@ -39,7 +39,7 @@
                 <Font name="Algerian" size="43.0" />
             </font>
         </Label>
-        <Label fx:id="lbldateandtime" layoutX="735.0" layoutY="44.0" prefHeight="54.0" prefWidth="425.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;">
+        <Label fx:id="lbldateandtime" layoutX="664.0" layoutY="44.0" prefHeight="54.0" prefWidth="509.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;">
             <font>
                 <Font name="Algerian" size="43.0" />
             </font>
