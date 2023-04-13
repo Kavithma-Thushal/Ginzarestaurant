@@ -5,9 +5,8 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Orders {
-    private String id;
-    private String customerid;
+public class CartDTO {
+    private String code;
     private Integer qty;
-    private String datetime;
+    private Double unitPrice;
 }

@@ -84,4 +84,32 @@ public class CustomerModel {
         }
         return customerList;
     }
+
+    public static List<String> loadIds() throws SQLException {
+        String sql = "SELECT id FROM customers ORDER BY id ASC ";
+        ResultSet resultSet = CrudUtil.execute(sql);
+
+        List<String> data = new ArrayList<>();
+        while (resultSet.next()) {
+            data.add(resultSet.getString(1));
+        }
+        return data;
+    }
+
+    public static Customer searchById(String id) throws SQLException {
+        String sql = "SELECT * FROM Customers WHERE id = ?";
+        ResultSet resultSet = CrudUtil.execute(sql, id);
+
+        if (resultSet.next()) {
+            return new Customer(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getString(4),
+                    resultSet.getString(5),
+                    resultSet.getString(6)
+            );
+        }
+        return null;
+    }
 }
