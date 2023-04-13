@@ -139,6 +139,7 @@ public class ManageordersFormController implements Initializable {
     @FXML
     private void cmbCustomerIdOnAction(ActionEvent event) {
         String id = cmbCustomerId.getValue();
+        cmbCustomerId.setDisable(true);
 
         try {
             Customer customer = CustomerModel.searchById(id);
