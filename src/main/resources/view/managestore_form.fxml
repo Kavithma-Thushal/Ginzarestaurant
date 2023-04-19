@@ -32,17 +32,17 @@
             <Font name="Algerian" size="17.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtUnitprice" layoutX="302.0" layoutY="568.0" prefHeight="31.0" prefWidth="200.0" promptText="Unit Price">
+      <TextField fx:id="txtUnitprice" layoutX="302.0" layoutY="568.0" onKeyReleased="#txtKeyRelease" prefHeight="31.0" prefWidth="200.0" promptText="Unit Price">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtQtyonhand" layoutX="526.0" layoutY="565.0" prefHeight="31.0" prefWidth="200.0" promptText="Quantity On Hand">
+      <TextField fx:id="txtQtyonhand" layoutX="526.0" layoutY="565.0" onKeyReleased="#txtKeyRelease" prefHeight="31.0" prefWidth="200.0" promptText="Quantity On Hand">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
       </TextField>
-      <Button layoutX="979.0" layoutY="507.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: lightblue;" text="Save">
+      <Button fx:id="btnSave" layoutX="979.0" layoutY="507.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: lightblue;" text="Save">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
@@ -62,7 +62,7 @@
             <Font name="Algerian" size="17.0" />
          </font>
       </Button>
-      <TextField fx:id="txtDescription" layoutX="526.0" layoutY="510.0" prefHeight="31.0" prefWidth="200.0" promptText="Description">
+      <TextField fx:id="txtDescription" layoutX="526.0" layoutY="510.0" onKeyReleased="#txtKeyRelease" prefHeight="31.0" prefWidth="200.0" promptText="Description">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
