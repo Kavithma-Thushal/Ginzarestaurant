@@ -10,18 +10,23 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.restaurant.dto.Customer;
 import lk.ijse.restaurant.dto.tm.CustomerTM;
 import lk.ijse.restaurant.model.CustomerModel;
+import lk.ijse.restaurant.util.Validation;
 
 import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.regex.Pattern;
 
 public class ManagecustomersFormController implements Initializable {
 
@@ -55,6 +60,19 @@ public class ManagecustomersFormController implements Initializable {
     private TableColumn colAddress;
     @FXML
     private Label lbldateandtime;
+    @FXML
+    private Button btnSave;
+    @FXML
+    private Button btnUpdate;
+    @FXML
+    private Button btnDelete;
+
+    private LinkedHashMap<TextField, Pattern> map = new LinkedHashMap();
+    Pattern name = Pattern.compile("^([A-Z a-z]{4,40})$");
+    Pattern nic = Pattern.compile("^([0-9]{12}|[0-9V]{10})$");
+    Pattern email = Pattern.compile("^[a-z A-Z 0-9 ._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$");
+    Pattern contact = Pattern.compile("^(07(0|1|2|4|5|6|7|8)[0-9]{7})$");
+    Pattern address = Pattern.compile("^([A-Z a-z]{4,40})$");
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -64,6 +82,40 @@ public class ManagecustomersFormController implements Initializable {
 
         getAll();
         setCellValueFactory();
+        disableButtons();
+        storeValidations();
+    }
+
+    private void disableButtons() {
+        btnSave.setDisable(true);
+
+    }
+
+    private void clearAllTxt() {
+        txtId.clear();
+        txtName.clear();
+        txtNic.clear();
+        txtEmail.clear();
+        txtContact.clear();
+        txtAddress.clear();
+
+        disableButtons();
+        txtName.requestFocus();
+        setBorders(txtId, txtName, txtNic, txtEmail, txtContact, txtAddress);
+    }
+
+    private void storeValidations() {
+        map.put(txtName, name);
+        map.put(txtNic, nic);
+        map.put(txtEmail, email);
+        map.put(txtContact, contact);
+        map.put(txtAddress, address);
+    }
+
+    public void setBorders(TextField... textFields) {
+        for (TextField textField : textFields) {
+            textField.setStyle("-fx-border-color: transparent");
+        }
     }
 
     private void setCellValueFactory() {
@@ -97,6 +149,18 @@ public class ManagecustomersFormController implements Initializable {
     }
 
     @FXML
+    private void txtKeyRelease(KeyEvent keyEvent) {
+        Object response = Validation.validate(map, btnSave);
+
+        if (keyEvent.getCode() == KeyCode.ENTER) {
+            if (response instanceof TextField) {
+                TextField txtnext = (TextField) response;
+                txtnext.requestFocus();
+            }
+        }
+    }
+
+    @FXML
     private void saveOnAction(ActionEvent event) {
 
         try {
@@ -124,11 +188,15 @@ public class ManagecustomersFormController implements Initializable {
                 tblCustomer.setItems(observableList);*/
 
                 new Alert(Alert.AlertType.CONFIRMATION, "Saved Successfully...!").show();
+                tblCustomer.refresh();
+                getAll();
             }
 
         } catch (Exception e) {
             new Alert(Alert.AlertType.ERROR, "Please try again...!").show();
         }
+        clearAllTxt();
+        txtName.requestFocus();
     }
 
     @FXML
@@ -168,6 +236,7 @@ public class ManagecustomersFormController implements Initializable {
         } catch (Exception e) {
             new Alert(Alert.AlertType.ERROR, "Please try again...!").show();
         }
+        clearAllTxt();
     }
 
     @FXML
@@ -179,6 +248,7 @@ public class ManagecustomersFormController implements Initializable {
         } catch (Exception e) {
             new Alert(Alert.AlertType.ERROR, "Please try again...!").show();
         }
+        clearAllTxt();
     }
 
     @FXML

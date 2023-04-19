@@ -97,6 +97,8 @@ public class ManagesuppliersFormController implements Initializable {
             if (SupplierModel.save(supplier) > 0) {
 
                 new Alert(Alert.AlertType.CONFIRMATION, "Saved Successfully...!").show();
+                tblsupplier.refresh();
+                getAll();
             }
 
         } catch (Exception e) {

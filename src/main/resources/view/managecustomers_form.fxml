@@ -32,17 +32,17 @@
             <Font name="Algerian" size="17.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtEmail" layoutX="302.0" layoutY="568.0" prefHeight="31.0" prefWidth="200.0" promptText="Customer email">
+      <TextField fx:id="txtEmail" layoutX="302.0" layoutY="568.0" onKeyReleased="#txtKeyRelease" prefHeight="31.0" prefWidth="200.0" promptText="Customer email">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtContact" layoutX="526.0" layoutY="565.0" prefHeight="31.0" prefWidth="200.0" promptText="customer contact">
+      <TextField fx:id="txtContact" layoutX="526.0" layoutY="565.0" onKeyReleased="#txtKeyRelease" prefHeight="31.0" prefWidth="200.0" promptText="customer contact">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
       </TextField>
-      <Button layoutX="979.0" layoutY="507.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: lightblue;" text="Save">
+      <Button fx:id="btnSave" layoutX="979.0" layoutY="507.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: lightblue;" text="Save">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
@@ -52,27 +52,27 @@
             <Font name="Algerian" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="979.0" layoutY="564.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: lightblue;" text="Update">
+      <Button fx:id="btnUpdate" layoutX="979.0" layoutY="564.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: lightblue;" text="Update">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="1089.0" layoutY="564.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: lightblue;" text="Delete">
+      <Button fx:id="btnDelete" layoutX="1089.0" layoutY="564.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: lightblue;" text="Delete">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
       </Button>
-      <TextField fx:id="txtName" layoutX="526.0" layoutY="510.0" prefHeight="31.0" prefWidth="200.0" promptText="Customer NAme">
+      <TextField fx:id="txtName" layoutX="526.0" layoutY="510.0" onKeyReleased="#txtKeyRelease" prefHeight="31.0" prefWidth="200.0" promptText="Customer NAme">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtNic" layoutX="755.0" layoutY="508.0" prefHeight="31.0" prefWidth="200.0" promptText="Customer NIC">
+      <TextField fx:id="txtNic" layoutX="755.0" layoutY="508.0" onKeyReleased="#txtKeyRelease" prefHeight="31.0" prefWidth="200.0" promptText="Customer NIC">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtAddress" layoutX="755.0" layoutY="565.0" prefHeight="31.0" prefWidth="200.0" promptText="customer address">
+      <TextField fx:id="txtAddress" layoutX="755.0" layoutY="565.0" onKeyReleased="#txtKeyRelease" prefHeight="31.0" prefWidth="200.0" promptText="customer address">
          <font>
             <Font name="Algerian" size="17.0" />
          </font>

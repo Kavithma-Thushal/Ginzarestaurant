@@ -96,6 +96,8 @@ public class ManagestoreFormController implements Initializable {
 
             if (ItemModel.save(item) > 0) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Saved Successfully...!").show();
+                tblItem.refresh();
+                getAll();
             }
         } catch (Exception e) {
             new Alert(Alert.AlertType.ERROR, "Please try again...!").show();

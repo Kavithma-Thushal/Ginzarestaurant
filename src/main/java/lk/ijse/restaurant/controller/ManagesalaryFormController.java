@@ -96,6 +96,8 @@ public class ManagesalaryFormController implements Initializable {
 
             if (SalaryModel.save(salary) > 0) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Saved Successfully...!").show();
+                tblSalary.refresh();
+                getAll();
             }
         } catch (Exception e) {
             new Alert(Alert.AlertType.ERROR, "Please try again...!").show();

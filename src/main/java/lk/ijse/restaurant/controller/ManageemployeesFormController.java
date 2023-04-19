@@ -112,6 +112,8 @@ public class ManageemployeesFormController implements Initializable {
             if (EmployeeModel.save(employee) > 0) {
 
                 new Alert(Alert.AlertType.CONFIRMATION, "Saved Successfully...!").show();
+                tblemployee.refresh();
+                getAll();
             }
 
         } catch (Exception e) {
