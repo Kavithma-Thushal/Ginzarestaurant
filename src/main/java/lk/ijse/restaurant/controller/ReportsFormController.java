@@ -9,11 +9,17 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.ijse.restaurant.db.DBConnection;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class ReportsFormController implements Initializable {
@@ -40,5 +46,18 @@ public class ReportsFormController implements Initializable {
         stage.setTitle("Admin Dashboard");
         stage.setResizable(false);
         stage.show();
+    }
+
+    @FXML
+    private void customerReportOnAction(ActionEvent event) throws SQLException, JRException {
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("Customer", "Hiruni");
+        //map.put("Table Name",txt.getText());
+
+        InputStream resource = this.getClass().getResourceAsStream("/reports/customerReport.jrxml");
+        JasperReport jasperReport = JasperCompileManager.compileReport(resource);
+        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, map, DBConnection.getInstance().getConnection());
+        //JasperPrintManager.printReport(jasperPrint,true);
+        JasperViewer.viewReport(jasperPrint, false);
     }
 }
