@@ -13,6 +13,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.ijse.restaurant.db.DBConnection;
 import lk.ijse.restaurant.dto.CartDTO;
 import lk.ijse.restaurant.dto.Customer;
 import lk.ijse.restaurant.dto.Item;
@@ -21,8 +22,11 @@ import lk.ijse.restaurant.model.CustomerModel;
 import lk.ijse.restaurant.model.ItemModel;
 import lk.ijse.restaurant.model.OrderModel;
 import lk.ijse.restaurant.model.PlaceOrderModel;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -239,8 +243,24 @@ public class ManageordersFormController implements Initializable {
         txtNetTotal.setText(String.valueOf(netTotal));
     }
 
+    private void printBills() throws JRException, SQLException {
+        ButtonType yes = new ButtonType("Yes", ButtonBar.ButtonData.OK_DONE);
+        ButtonType no = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+        Optional<ButtonType> buttonType = new Alert(Alert.AlertType.CONFIRMATION, "Do you want a bill?", yes, no).showAndWait();
+
+        if (buttonType.orElse(yes) == yes) {
+            HashMap<String, Object> map = new HashMap<>();
+            map.put("Customer", "Hiruni");
+            InputStream resource = this.getClass().getResourceAsStream("/reports/ginzaRestaurantBill.jrxml");
+            JasperReport jasperReport = JasperCompileManager.compileReport(resource);
+            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, map, DBConnection.getInstance().getConnection());
+            JasperViewer.viewReport(jasperPrint, false);
+        }
+    }
+
     @FXML
-    private void placeOrderOnAction(ActionEvent event) {
+    private void placeOrderOnAction(ActionEvent events) {
         String oId = txtOrderId.getText();
         String cusId = cmbCustomerId.getValue();
 
@@ -261,7 +281,16 @@ public class ManageordersFormController implements Initializable {
         try {
             isPlaced = PlaceOrderModel.placeOrder(oId, cusId, cartDTOList);
             if (isPlaced) {
-                new Alert(Alert.AlertType.INFORMATION, "Order Placed...!").show();
+                Alert ginzaAlert=new Alert(Alert.AlertType.INFORMATION, "Order Placed...!");
+                ginzaAlert.show();
+
+                ginzaAlert.setOnHidden(event -> {
+                    try {
+                        printBills();
+                    } catch (Exception e) {
+                        new Alert(Alert.AlertType.ERROR, "please try again...!").show();
+                    }
+                });
             } else {
                 new Alert(Alert.AlertType.ERROR, "Order is Not Placed...!").show();
             }

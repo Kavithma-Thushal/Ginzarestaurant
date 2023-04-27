@@ -23,7 +23,7 @@ public class AdminloginFormController {
     private PasswordField txtPassword;
 
     public void adminloginOnAction(ActionEvent event) throws IOException {
-        if (txtUsername.getText().equals("") && txtPassword.getText().equals("")) {
+        if (txtUsername.getText().equals("Admin") && txtPassword.getText().equals("1234")) {
             Parent parent = FXMLLoader.load(getClass().getResource("/view/admindashboard_form.fxml"));
             Stage stage = (Stage) root.getScene().getWindow();
             Scene scene = new Scene(parent);

@@ -23,7 +23,7 @@ public class CashierloginFormController {
     private PasswordField txtPassword;
 
     public void cashierloginOnAction(ActionEvent event) throws IOException {
-        if (txtUsername.getText().equals("") && txtPassword.getText().equals("")) {
+        if (txtUsername.getText().equals("Cashier") && txtPassword.getText().equals("1234")) {
             Parent parent = FXMLLoader.load(getClass().getResource("/view/cashierdashboard_form.fxml"));
             Stage stage = (Stage) root.getScene().getWindow();
             Scene scene = new Scene(parent);
