@@ -28,7 +28,7 @@ Functions :-<br/>
 This project is licensed under the [MIT](LICENSE) license.
 
 If you hava any bugs or issues ,If you want to explain code pleace contact me on :<br/> 
-kavithmathushal9007@gmail.com
+https://www.kavithmathushal9007@gmail.com
 
 ![Screenshot 2023-07-02 232006](https://github.com/Thushal2001/Ginzarestaurant/assets/125787087/c9ebe806-469b-4070-8a3f-ab395f6a9c89)
 ![Screenshot 2023-07-02 232017](https://github.com/Thushal2001/Ginzarestaurant/assets/125787087/d53cca52-3f9f-4a59-92ac-ba0992bce626)
