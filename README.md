@@ -16,7 +16,7 @@ Functions :-<br/>
 
 ### How to use
 * Clone this repo https://github.com/Thushal2001/Ginzarestaurant.git
-* Add project database [Project Database](https://github.com/Thushal2001/Ginzarestaurant/blob/master/src/main/resources/schema/schema.sql)
+* Add project database [Project Database](https://github.com/Thushal2001/Ginzarestaurant/blob/master/Project%20Database)
 * Reload the `pom.xml`
 * Run the Application
 
