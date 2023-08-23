@@ -1,4 +1,4 @@
-# Ginzarestaurant
+# ✌️Ginzarestaurant
 Restaurant using java 11 ,javafx &amp; maven
 
 Technology :-<br/>
@@ -16,18 +16,18 @@ Functions :-<br/>
 
 ### How to use
 * Clone this repo https://github.com/Thushal2001/Ginzarestaurant.git
-* Add project database [Project Database](https://github.com/Thushal2001/Ginzarestaurant/blob/master/Project%20Database)
+* Add project database [Project Database](https://github.com/Thushal2001/Ginzarestaurant/blob/master/src/main/resources/schema/schema.sql)
 * Reload the `pom.xml`
 * Run the Application
 
 ### Version
-2023.0.0.1
+1.0.0
 
 ### License
-© 2023 All Right Reserved Designed By Kavithma Thushal<br/>
+⭐© 2023 All Right Reserved Designed By Kavithma Thushal<br/>
 This project is licensed under the [MIT](LICENSE) license.
 
-If you hava any bugs or issues ,If you want to explain code pleace contact me on :<br/> 
+⭐If you hava any bugs or issues ,If you want to explain code pleace contact me on :<br/> 
 [kavithmathushal9007@gmail.com](https://www.kavithmathushal9007@gmail.com)
 
 ![Screenshot 2023-07-02 232006](https://github.com/Thushal2001/Ginzarestaurant/assets/125787087/c9ebe806-469b-4070-8a3f-ab395f6a9c89)
